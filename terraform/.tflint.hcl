@@ -7,6 +7,10 @@ rule "terraform_required_version" {
   enabled = false   # Declared in Jinja template
 }
 
+rule "terraform_required_providers" {
+  enabled = false   # Declared in Jinja template
+}
+
 rule "terraform_module_pinned_source" {
   enabled = false
 }
