@@ -24,7 +24,7 @@ resource "aws_iam_role" "steampipe_cloud_role" {
         },
         Condition : {
           StringEquals : {
-            "sts:ExternalId" : "${data.aws_ssm_parameter.steampipe_secret.value}:${aws_ssm_parameter.steampipe_suffix.value}}"
+            "sts:ExternalId" : "${data.aws_ssm_parameter.steampipe_secret.value}:${aws_ssm_parameter.steampipe_suffix.value}"
           }
         }
       },
