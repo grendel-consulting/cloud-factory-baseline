@@ -50,7 +50,10 @@ resource "aws_default_security_group" "primary_region" {
 # }
 
 data "aws_vpc" "primary_region" {
-  default = true
+  filter {
+    name   = "tag:Name"
+    values = ["aws-controltower-VPC"]
+  }
 }
 
 # data "aws_vpc" "backup_region" {
