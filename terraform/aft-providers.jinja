@@ -12,3 +12,31 @@ provider "aws" {
     }
   }
 }
+
+# Backup region hard-coded untill AFT supports providing this dynamically i
+# some fashion, see https://github.com/aws-ia/terraform-aws-control_tower_account_factory/issues/264
+# provider "aws" {
+#   alias = "backup"
+#   region = "eu-central-1"
+#   assume_role {
+#     role_arn = "{{ target_admin_role_arn }}"
+#   }
+#   default_tags {
+#     tags = {
+#       managed_by = "AFT"
+#     }
+#   }
+# }
+#
+# provider "aws" {
+#   alias = "global"
+#   region = "us-east-1"
+#   assume_role {
+#     role_arn = "{{ target_admin_role_arn }}"
+#   }
+#   default_tags {
+#     tags = {
+#       managed_by = "AFT"
+#     }
+#   }
+# }

@@ -1,3 +1,15 @@
+data "aws_ssm_parameter" "security_contact" {
+  name = "/aft/account-request/custom-fields/security-contact"
+}
+
+data "aws_ssm_parameter" "security_email" {
+  name = "/aft/account-request/custom-fields/security-email"
+}
+
+data "aws_ssm_parameter" "security_phone" {
+  name = "/aft/account-request/custom-fields/security-phone"
+}
+
 data "aws_ssm_parameter" "steampipe_cloud" {
   name = "/aft/account-request/custom-fields/steampipe-cloud"
 }
