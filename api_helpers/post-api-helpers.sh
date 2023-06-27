@@ -2,4 +2,5 @@
 
 echo "Executing Baseline Post-API Helpers"
 
-aws iam generate-credential-report
+# FIXME: Blocked by IAM or SCP
+# aws iam generate-credential-report
