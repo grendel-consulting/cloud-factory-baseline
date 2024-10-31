@@ -17,3 +17,11 @@ data "aws_ssm_parameter" "steampipe_cloud" {
 data "aws_ssm_parameter" "steampipe_secret" {
   name = "/aft/account-request/custom-fields/steampipe-secret"
 }
+
+data "aws_ssm_parameter" "aikidodev_cloud" {
+  name = "/aft/account-request/custom-fields/aikidodev-cloud"
+}
+
+data "aws_ssm_parameter" "aikidodev_secret" {
+  name = "/aft/account-request/custom-fields/aikidodev-secret"
+}
